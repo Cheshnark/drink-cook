@@ -1,0 +1,15 @@
+.container {
+    display: grid;
+    grid-template-columns: 20rem 20rem 20rem 20rem;
+    grid-template-rows: 100px;
+    grid-gap: 20px;
+    justify-items:center;
+    align-items: center;
+}
+
+.logo {
+    background-image: url('../../../public/images/brewdog-pure-logo.png');
+    min-height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
