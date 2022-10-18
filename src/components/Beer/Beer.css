@@ -1,0 +1,21 @@
+.beer {
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+
+.beer-img-container {
+    width: 4.7rem;
+    height: 18.3rem;
+    justify-content: center;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+
+.beer-img-container img {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

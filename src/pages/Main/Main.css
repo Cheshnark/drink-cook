@@ -25,7 +25,6 @@ body {
   }
   
   .main h1 {
-    font-family: 'League Gothic', sans-serif;
     font-size: 4.2vw;
     margin-top: 1rem;
   }
@@ -60,6 +59,7 @@ body {
     .main p {
       top: 19%;
       left: -45%;
+      font-size: 2vw;
     }
   
     .main button {
