@@ -42,11 +42,11 @@ const Beer = (props) => {
                         </div>
                     </div>
                     <h3>FOOD PAIRING</h3>
-                    <ul>
+                    {/* <ul>
                         <li>{beer.food_pairing[0]}</li>
                         <li>{beer.food_pairing[1]}</li>
                         <li>{beer.food_pairing[2]}</li>
-                    </ul>
+                    </ul> */}
                     <h3>BREWER TIPS</h3>
                     <p>{beer.brewers_tips}</p>
                 </div>

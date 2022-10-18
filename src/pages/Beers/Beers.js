@@ -10,17 +10,17 @@ const Beers = () => {
     const [beerId, setBeerId] = useState([]);
     const [showBeer, setShowBeer] = useState(false);
 
-    // useEffect( () => {
-    //     fetch('https://api.punkapi.com/v2/beers?page=2&per_page=80')
-    //     .then(response => response.json())
-    //     .then( (data) => {
-    //         console.log(data);
-    //         setBeers(data);
-    //     })
-    //     .catch((err) => {
-    //         console.log(err.message);
-    //     })
-    // }, []);
+    useEffect( () => {
+        fetch('https://api.punkapi.com/v2/beers?page=2&per_page=80')
+        .then(response => response.json())
+        .then( (data) => {
+            console.log(data);
+            setBeers(data);
+        })
+        .catch((err) => {
+            console.log(err.message);
+        })
+    }, []);
 
     const beerInfo = (e) => {
         setBeerId(e.target.id);
@@ -43,7 +43,7 @@ const Beers = () => {
                         <h2>{beer.name}</h2>
                         <p>{beer.tagline}</p>
                         <div className="beer-buttons">
-                            <button id={beer.id} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Info</button>
+                            <button id={beer.id} onClick={beerInfo} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Info</button>
                             <button id={beer.id} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">What to cook?</button>
                         </div>
                     </div>

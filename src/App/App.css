@@ -4,6 +4,10 @@
 	box-sizing: border-box;
 }
 
+body {
+	overflow: auto;
+}
+
 h1, h3 {
   font-family: 'League Gothic', sans-serif;
 }
