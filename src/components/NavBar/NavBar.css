@@ -4,6 +4,7 @@
     height: 150px;
     margin: auto;
     z-index: 1;
+    transition: top 0.3s;
 }
 
 .navbar img {
@@ -19,6 +20,18 @@
     align-items: center;
     height: 10vh;
     padding: 5px 10%;
+}
+
+@media (max-width: 500px) {
+    .header {
+        margin-top: 1.5rem;
+    }
+}
+
+@media (orientation: landscape) {
+    .header {
+        margin-top: 1.7rem
+    }
 }
 
 .header .header__logo{

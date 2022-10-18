@@ -1,21 +1,78 @@
 .beer {
-    color: white;
+    /* color: white; */
+    background-color: white;
     position: absolute;
-    top: 25%;
-    left: 25%;
+    margin: 1.5rem;
+}
+
+.beer-item {
+    position: relative;
+    margin: 1 rem auto;
+    padding: 0 1rem;
 }
 
 .beer-img-container {
-    width: 4.7rem;
-    height: 18.3rem;
-    justify-content: center;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
+    width: 5.5rem;
+    height: 19.1rem;
+    margin: 2rem auto 5rem auto;
 }
 
 .beer-img-container img {
     width: 100%;
-    position: absolute;
-    bottom: 0;
+    margin: auto;
+}
+
+.content-container{
+    margin-bottom: 3rem;
+}
+
+.beer h1,h2,h3 {
+    text-align:center;
+}
+
+.beer h3, p {
+    margin: 1rem auto;
+}
+
+.beer h1 {
+    text-transform: uppercase;
+    line-height: 4.5rem;
+    
+}
+
+.beer h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    
+}
+
+.beer h3 {
+    font-size: 2rem;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 7rem 7rem;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    justify-items:center;
+    margin: 0 auto;
+    width: 80%;
+    place-content: center;
+}
+
+.specs-grid p {
+    width: 75%;
+    margin-top: 0;
+}
+
+.specs-grid h4 {
+    font-weight: 700;
+}
+
+.beer ul {
+    width: 90%;
+    margin: 0 auto 2rem auto;
+    list-style: inside;
+    font-size: 1.05rem;
 }

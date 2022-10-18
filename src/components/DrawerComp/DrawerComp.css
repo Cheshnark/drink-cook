@@ -1,10 +1,10 @@
 .drawer-comp {
-    height: 45vh;
+    height: 65vh;
     width: 100vw;
     position: absolute;
     top: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.9);
 }
 
 .drawer-comp__content {
