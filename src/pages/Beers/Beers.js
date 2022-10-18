@@ -34,27 +34,26 @@ const Beers = () => {
                 <h1>BEERS</h1>
                 <div className="line" />
             </div>
-
-            {showBeer ? ( 
-                <div className="beer-container" onClick={ () => setShowBeer(false)}>
-                    <Beer beerId={beerId} />
-                </div> ) : (
-                <div className="beers-container">
-                    {beers.map((beer, index) => (
-                        <div className="item" key={index}>
-                            <div className="beers-img-container">
-                                <img src={beer.image_url} alt='beers-img'/>
-                            </div>
-                            <h2>{beer.name}</h2>
-                            <p>{beer.tagline}</p>
-                            <div className="beer-buttons">
-                                <button id={beer.id} onClick={beerInfo} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Info</button>
-                                <button id={beer.id} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">What to cook?</button>
-                            </div>
+            <div className="beers-container">
+                {beers.map((beer, index) => (
+                    <div className="item" key={index}>
+                        <div className="beers-img-container">
+                            <img src={beer.image_url} alt='beers-img'/>
                         </div>
-                    ))}               
-                </div>
-                )}
+                        <h2>{beer.name}</h2>
+                        <p>{beer.tagline}</p>
+                        <div className="beer-buttons">
+                            <button id={beer.id} onClick={beerInfo} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Info</button>
+                            <button id={beer.id} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">What to cook?</button>
+                        </div>
+                    </div>
+                ))}               
+            </div>
+            
+            {showBeer && ( 
+            <div className="beer-container" onClick={ () => setShowBeer(false)}>
+                <Beer beerId={beerId} />
+            </div> )}
 
             <div className="item">
                 <div className="beers-img-container">
