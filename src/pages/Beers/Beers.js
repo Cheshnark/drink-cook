@@ -2,7 +2,6 @@ import './Beers.css';
 import Navbar from '../../components/NavBar/NavBar.js';
 import Beer from '../../components/Beer/Beer';
 import { useEffect, useState } from 'react';
-import { Container } from 'postcss';
 
 const Beers = () => {
 
@@ -55,7 +54,7 @@ const Beers = () => {
                 <Beer beerId={beerId} />
             </div> )}
 
-            <div className="item">
+            {/* <div className="item">
                 <div className="beers-img-container">
                     <img src="https://images.punkapi.com/v2/132.png"/>
                 </div>
@@ -63,9 +62,9 @@ const Beers = () => {
                 <p>Post Modern Classic. Spiky. Tropical. Hoppy.</p>
                 <div className="beer-buttons">
                     <button onClick={beerInfo} id='197' class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Info</button>
-                    {/* <button onClick={beerDish} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">What to cook?</button> */}
+                    <button onClick={beerDish} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">What to cook?</button>
                 </div>
-            </div>
+            </div> */}
 
         </div>
         

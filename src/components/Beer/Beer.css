@@ -11,6 +11,26 @@
     padding: 0 1rem;
 }
 
+.beer-x-container {
+    width: 70px;
+    position:absolute;
+    right: 5%;
+}
+
+@media (min-width: 620px){
+    .beer {
+        position: relative;
+        margin: 3rem auto;
+        padding: 1rem;
+        width: 60%;
+        text-align: justify;
+    }
+
+    .beer-item {
+        margin-bottom: 3rem;
+    }
+}
+
 .beer-img-container {
     width: 5.5rem;
     height: 19.1rem;
@@ -24,6 +44,13 @@
 
 .content-container{
     margin-bottom: 3rem;
+}
+
+@media (min-width: 620px){
+    .content-container {
+        width: 65%;
+        margin: auto;
+    }
 }
 
 .beer h1,h2,h3 {
@@ -70,9 +97,44 @@
     font-weight: 700;
 }
 
+.food-grid {
+    display: grid;
+    grid-template-columns: 8rem 8rem;
+    grid-template-rows: auto;
+    grid-gap: 2.5rem;
+    margin: 0 auto;
+    padding: 0.1rem;
+    width: 95%;
+}
+
+@media (min-width: 620px) {
+    .food-grid {
+        width: 65%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .food-grid {
+        width: 65%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1600px) {
+    .food-grid {
+        grid-template-columns: 15rem 15rem;
+    }
+}
+
 .beer ul {
-    width: 90%;
-    margin: 0 auto 2rem auto;
+    width: 95%;
+    margin: 0 auto 0 auto;
     list-style: inside;
     font-size: 1.05rem;
+}
+
+.food-buttons button {
+    position: relative;
+    top: 25%;
 }

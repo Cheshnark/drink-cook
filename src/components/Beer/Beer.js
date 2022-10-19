@@ -3,9 +3,7 @@ import { useEffect, useState } from "react";
 
 const Beer = (props) => {
     const beerId = props.beerId;
-    const [beer, setBeer] = useState([]);
-    
-
+    const [beer, setBeer] = useState([]); 
 
     useEffect( () => {
         fetch('https://api.punkapi.com/v2/beers/' + beerId)
@@ -19,9 +17,24 @@ const Beer = (props) => {
         })
     }, []);
 
+// What follows is a fix I arrived with to avoid the app from bugging when accessing the array, for it
+// considers is empty otherwise and the whole component doesn't load propertly. Need someone to check this. 
+
+    const foodPairing = beer.food_pairing;
+    let list = [];
+
+    if(foodPairing === undefined) {
+        console.log('Fuck dis shit');
+    } else {
+        list = foodPairing
+    }
+
     return(
         <div className="beer">
             <div className="beer-item">
+                <div className="beer-x-container">
+                    <img src="images/x.png" className='beer-x-symbol hover:cursor-pointer' alt='x-symbol'/>
+                </div>
                 <div className="beer-img-container">
                     <img src={beer.image_url} alt='beer-img'/>
                 </div>
@@ -42,16 +55,21 @@ const Beer = (props) => {
                         </div>
                     </div>
                     <h3>FOOD PAIRING</h3>
-                    {/* <ul>
-                        <li>{beer.food_pairing[0]}</li>
-                        <li>{beer.food_pairing[1]}</li>
-                        <li>{beer.food_pairing[2]}</li>
-                    </ul> */}
+                    <div className="food-grid">
+                        <div className="food-list">
+                        <ul>
+                            <li>{list[0]}</li>
+                            <li>{list[1]}</li>
+                            <li>{list[2]}</li>
+                        </ul>
+                        </div>
+                        <div className="food-buttons">
+                        <button id={beer.id} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Random cooking?</button>
+                        </div>
+                    </div>
                     <h3>BREWER TIPS</h3>
                     <p>{beer.brewers_tips}</p>
                 </div>
-
-
             </div>
         </div>
     )

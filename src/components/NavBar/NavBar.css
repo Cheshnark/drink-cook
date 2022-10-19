@@ -41,6 +41,14 @@
 .header .header__logo img{
     height: 70px;
     width: auto;
+    position: relative;
+    top: -1.5rem;
+}
+
+@media (max-width: 1300px) {
+    .header .header__logo img {
+        top: 0;
+    }
 }
 
 .header__logo img:hover{
