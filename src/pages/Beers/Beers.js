@@ -19,6 +19,9 @@ const Beers = () => {
         .catch((err) => {
             console.log(err.message);
         })
+
+        //Desactiva una regla de useEffect que salta cuando se deja la dependencia vacía. 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     const beerInfo = (e) => {
@@ -31,7 +34,6 @@ const Beers = () => {
             <Navbar />
             <div className='title-1'>
                 <h1>BEERS</h1>
-                <div className="line" />
             </div>
             <div className="beers-container">
                 {beers.map((beer, index) => (

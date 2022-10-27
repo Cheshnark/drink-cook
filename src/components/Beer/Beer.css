@@ -3,11 +3,12 @@
     background-color: white;
     position: absolute;
     margin: 1.5rem;
+    border-radius: 5px;
 }
 
 .beer-item {
     position: relative;
-    margin: 1 rem auto;
+    margin: 1rem auto;
     padding: 0 1rem;
 }
 
@@ -35,6 +36,7 @@
     width: 5.5rem;
     height: 19.1rem;
     margin: 2rem auto 5rem auto;
+    padding-top: 1.5rem;
 }
 
 .beer-img-container img {

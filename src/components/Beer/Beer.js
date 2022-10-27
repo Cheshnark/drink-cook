@@ -17,6 +17,11 @@ const Beer = (props) => {
         })
     }, []);
 
+    const clickedBeer = () => {
+        const clickedBeer = beer.id;
+        console.log(clickedBeer);
+    };
+
 // What follows is a fix I arrived with to avoid the app from bugging when accessing the array, for it
 // considers is empty otherwise and the whole component doesn't load propertly. Need someone to check this. 
 
@@ -64,7 +69,7 @@ const Beer = (props) => {
                         </ul>
                         </div>
                         <div className="food-buttons">
-                        <button id={beer.id} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Random cooking?</button>
+                        <button id={beer.id} onClick={clickedBeer} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Random cooking?</button>
                         </div>
                     </div>
                     <h3>BREWER TIPS</h3>

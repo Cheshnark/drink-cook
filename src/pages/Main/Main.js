@@ -1,6 +1,10 @@
 import './Main.css';
 import {Link} from 'react-router-dom';
 
+const clickedRandom = () => {
+    
+}
+
 const Main = () => {
     return(
         <div className="main">
@@ -21,7 +25,7 @@ const Main = () => {
                     </button>
                 </Link>
                 <Link to='/about'>
-                    <button class="bg-transparent text-white font-bold hover:text-black py-2 px-4">
+                    <button onClick={clickedRandom} class="bg-transparent text-white font-bold hover:text-black py-2 px-4">
                         About
                     </button>
                 </Link>
