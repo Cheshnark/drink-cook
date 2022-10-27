@@ -36,7 +36,7 @@ const Random = () => {
                 <h1>TO DRINK</h1>
                 <Beer />
                 <h1>TO COOK</h1>
-                <Cook />
+                {/* <Cook /> */}
             </div>
         </div>
     )

@@ -1,11 +1,22 @@
 import './Main.css';
 import {Link} from 'react-router-dom';
-
-const clickedRandom = () => {
-    
-}
+import useBeerFetch from '../../components/useBeerFetch';
 
 const Main = () => {
+    const {beer:beers, pending, error} = useBeerFetch('https://api.punkapi.com/v2/beers?page=2&per_page=80');
+
+    const clickedRandom = () => {
+    
+        if(!pending && !error) {
+            const randomBeerId = Math.floor(Math.random() * beers.length);
+            const randomBeer = beers[randomBeerId];
+        } else {
+            console.error('An error ocurred with the API fetching :(');
+        }
+    }
+
+    clickedRandom();
+
     return(
         <div className="main">
             <div className="main-content">
