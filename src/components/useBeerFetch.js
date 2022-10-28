@@ -8,8 +8,7 @@ const useBeerFetch = (url) => {
     useEffect( () => {
         const abortCont = new AbortController();
 
-        setTimeout ( () => {
-            fetch(url, {signal:abortCont.signal})
+        fetch(url, {signal:abortCont.signal})
         .then(res => {
             if (!res.ok){
                 throw Error ('Could not fetch data from that source');
@@ -29,7 +28,6 @@ const useBeerFetch = (url) => {
                 setPending(false);
                 setError(err.message);
             }
-        })
         })
 
         return () => abortCont.abort();
