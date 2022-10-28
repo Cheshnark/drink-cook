@@ -42,7 +42,7 @@ const Random = () => {
                 <h1>TO DRINK</h1>
                 <Beer beerId={beerId}/>
                 <h1>TO COOK</h1>
-                {/* <Cook recipe={recipe}/> */}
+                <Cook recipe={recipe}/>
             </div>
         </div>
     )

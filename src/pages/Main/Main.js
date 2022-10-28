@@ -14,8 +14,8 @@ const Main = () => {
             setRandomBeer(beers[randomBeerId]);
 
             const randomDish = beers[randomBeerId].food_pairing[Math.floor(Math.random() * 3)];
-            console.log(randomDish.substring(0, randomDish.indexOf(' ',randomDish.indexOf(' ') + 1)));
-            setRandomRecipe(randomDish);
+            const randomDishFirstWords = randomDish.substring(0, randomDish.indexOf(' ',randomDish.indexOf(' ') + 1));
+            setRandomRecipe(randomDishFirstWords.replace(/\s/g, '%20').toLowerCase());
         } else {
             console.error('An error ocurred with the API fetching :(');
         }
