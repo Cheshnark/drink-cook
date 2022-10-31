@@ -19,8 +19,6 @@ const Beer = (props) => {
     //     list = foodPairing
     // }
 
-    console.log(beer);
-
     return(
         <div className="beer">
             {pending && <div>Loading...</div>}

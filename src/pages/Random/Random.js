@@ -33,7 +33,7 @@ const Random = () => {
         deleteElement(xContainer);        
         deleteElement(foodButtons);
 
-    },[location])
+    },[])
 
     return(
         <div className="random">

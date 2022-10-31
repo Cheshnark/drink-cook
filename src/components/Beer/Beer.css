@@ -37,11 +37,14 @@
     height: 19.1rem;
     margin: 2rem auto 5rem auto;
     padding-top: 1.5rem;
+    position: relative;
 }
 
 .beer-img-container img {
     width: 100%;
     margin: auto;
+    position: absolute;
+    bottom: -2.5rem;
 }
 
 .content-container{
