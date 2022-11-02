@@ -1,5 +1,6 @@
 import './Beers.css';
 import Navbar from '../../components/NavBar/NavBar.js';
+import Footer from '../../components/Footer/Footer';
 import Beer from '../../components/Beer/Beer';
 import { useState } from 'react';
 import useBeerFetch from '../../components/useBeerFetch';
@@ -59,6 +60,7 @@ const Beers = () => {
                     </div> */}
                 </div>
             )}
+            <Footer />
         </div>
         
     )

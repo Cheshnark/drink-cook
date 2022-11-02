@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import DrawerButton from '../DrawerButton/DrawerButton';
 import DrawerComp from '../DrawerComp/DrawerComp';
+import RandomButton from '../RandomButton';
 
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
@@ -58,7 +59,7 @@ const Navbar = () => {
             <nav>
              <ul class="nav-links">
               <Link to='/beers'><li><a href="#">Beers</a></li></Link>
-              <Link to='/random'><li><a href="#">Random</a></li></Link>
+              <RandomButton><li><a href="#">Random</a></li></RandomButton>
               <Link to='/about'><li><a href="#">About</a></li></Link>
              </ul>            
           </nav>

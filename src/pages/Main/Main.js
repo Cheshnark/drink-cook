@@ -1,6 +1,7 @@
 import './Main.css';
 import {Link} from 'react-router-dom';
 import useBeerFetch from '../../components/useBeerFetch';
+import Footer from '../../components/Footer/Footer';
 import { useState, useEffect } from 'react';
 
 const Main = () => {
@@ -22,6 +23,7 @@ const Main = () => {
     }, [beers])
 
     return(
+        <>
         <div className="main">
         {pending && <div>Loading...</div>}
         {error && <div>{error}</div>}
@@ -52,6 +54,8 @@ const Main = () => {
             </div>
         )}
         </div>
+        <Footer />
+        </>
     )
 }
 

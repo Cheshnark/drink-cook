@@ -1,5 +1,6 @@
 import './Random.css';
 import Navbar from '../../components/NavBar/NavBar.js';
+import Footer from '../../components/Footer/Footer';
 import Beer from '../../components/Beer/Beer';
 import Cook from '../../components/Cook/Cook';
 import { useEffect } from 'react';
@@ -44,6 +45,7 @@ const Random = () => {
                 <h1>TO COOK</h1>
                 <Cook recipe={recipe}/>
             </div>
+            <Footer />
         </div>
     )
 }

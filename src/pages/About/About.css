@@ -1,0 +1,22 @@
+.about-item {
+    background-color: white;
+    border-radius: 5px;
+    margin: 15rem auto 3rem auto;
+    padding: 1rem;
+    width: 80%;
+}
+
+.about-content {
+    padding: 3rem;
+}
+
+.about-content h1 {
+    text-align: center;
+    line-height: 5.5rem;
+}
+
+.about-content p {
+    white-space: pre-wrap;
+    text-align: justify;
+    font-size: 1.25rem;
+}
