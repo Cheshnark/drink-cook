@@ -6,17 +6,18 @@ import { useState, useEffect } from 'react';
 
 const Main = () => {
     const {beer:beers, pending, error} = useBeerFetch('https://api.punkapi.com/v2/beers?page=2&per_page=80');
-    const [randomBeer, setRandomBeer] = useState(null);
+    const [randomBeerId, setRandomBeerId] = useState(null);
     const [randomRecipe, setRandomRecipe] = useState(null);
 
     useEffect(() => {
         if(beers) {
             const randomBeerId = Math.floor(Math.random() * beers.length);
-            setRandomBeer(beers[randomBeerId]);
+            setRandomBeerId(beers[randomBeerId].id);
 
             const randomDish = beers[randomBeerId].food_pairing[Math.floor(Math.random() * 3)];
             const randomDishFirstWords = randomDish.substring(0, randomDish.indexOf(' ',randomDish.indexOf(' ') + 1));
             setRandomRecipe(randomDishFirstWords.replace(/\s/g, '%20').toLowerCase());
+            console.log(randomBeerId, randomRecipe);
         } else {
             console.error('An error ocurred with the API fetching :(');
         }
@@ -40,7 +41,7 @@ const Main = () => {
                             Beers
                         </button>
                     </Link>
-                    <Link to='/random' state={{randomBeer:randomBeer, randomRecipe:randomRecipe}}>
+                    <Link to='/random' state={{randomBeerId:randomBeerId, randomRecipe:randomRecipe}}>
                         <button class="bg-transparent text-white font-bold hover:text-black py-2 px-4">
                             Random
                         </button>

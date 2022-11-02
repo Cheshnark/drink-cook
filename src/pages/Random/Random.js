@@ -9,10 +9,12 @@ import { useLocation } from "react-router-dom";
 const Random = () => {
 
     const location = useLocation();
-    const beer = location.state?.randomBeer;
-    const beerId = beer.id;
+    const beer = location.state?.randomBeerId;
+    const beerIdRandom = beer;
     const recipe = location.state?.randomRecipe;
 
+    // const beer = location.state?.beerId;
+    // const beerIdRandom = beer;
 
     // Para que el querySelector funcione tiene que estar dentro de un useEffect, para que empiece 
     // a funcionar una vez se haya renderizado la página. 
@@ -41,7 +43,7 @@ const Random = () => {
             <Navbar />
             <div className="random-content">
                 <h1>TO DRINK</h1>
-                <Beer beerId={beerId}/>
+                <Beer beerId={beerIdRandom}/>
                 <h1>TO COOK</h1>
                 <Cook recipe={recipe}/>
             </div>
