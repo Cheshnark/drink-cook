@@ -1,11 +1,11 @@
 import './Beer.css'
 import useBeerFetch from '../useBeerFetch';
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Beer = (props) => {
     const beerId = props.beerId;
     const {beer, pending, error} = useBeerFetch('https://api.punkapi.com/v2/beers/' + beerId);
-
-
 
 // What follows is a fix I arrived with to avoid the app from bugging when accessing the array, for it
 // considers is empty otherwise and the whole component doesn't load propertly. Need someone to check this. 
@@ -57,7 +57,9 @@ const Beer = (props) => {
                             </ul>
                             </div>
                             <div className="food-buttons">
-                            <button id={beer[0].id} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Random cooking?</button>
+                                <Link to='/random' state={{randomBeerId:beerId}}>
+                                    <button id={beerId} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">What to cook?</button>
+                                </Link>
                             </div>
                         </div>
                         <h3>BREWER TIPS</h3>
