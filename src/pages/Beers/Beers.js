@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer';
 import Beer from '../../components/Beer/Beer';
 import { useState } from 'react';
 import useBeerFetch from '../../components/useBeerFetch';
+import BeerToRandom from '../../components/BeerToRandom';
 
 const Beers = () => {
 
@@ -36,7 +37,7 @@ const Beers = () => {
                                 <p>{beer.tagline}</p>
                                 <div className="beer-buttons">
                                     <button id={beer.id} onClick={beerInfo} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Info</button>
-                                    <button id={beer.id} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">What to cook?</button>
+                                    <BeerToRandom id={beer.id}/>
                                 </div>
                             </div>
                         ))}               
