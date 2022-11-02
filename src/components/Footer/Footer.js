@@ -4,10 +4,21 @@ const Footer = (props) => {
 
     const year = (new Date()).getFullYear();
 
+    const scroll = props.scroll;
+
     return(
-        <div className="footer">
-            <p>Csnark {year}</p>
-        </div>
+        <>
+        {scroll ? (
+            <div className="footer" style={{position:'relative'}}>
+                <p>Csnark {year}</p>
+            </div>
+        ):(
+            <div className="footer">
+                <p>Csnark {year}</p>
+            </div>
+        )}
+        </>
+       
     )
 }
 

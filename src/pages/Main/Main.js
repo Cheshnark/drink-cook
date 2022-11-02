@@ -54,7 +54,7 @@ const Main = () => {
             </div>
         )}
         </div>
-        <Footer />
+        <Footer scroll={false}/>
         </>
     )
 }

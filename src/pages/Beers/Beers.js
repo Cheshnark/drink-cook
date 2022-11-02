@@ -60,7 +60,7 @@ const Beers = () => {
                     </div> */}
                 </div>
             )}
-            <Footer />
+            <Footer scroll={true}/>
         </div>
         
     )

@@ -45,7 +45,7 @@ const Random = () => {
                 <h1>TO COOK</h1>
                 <Cook recipe={recipe}/>
             </div>
-            <Footer />
+            <Footer scroll={true}/>
         </div>
     )
 }
