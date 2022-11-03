@@ -1,6 +1,5 @@
 import './Beer.css'
 import useBeerFetch from '../useBeerFetch';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Beer = (props) => {

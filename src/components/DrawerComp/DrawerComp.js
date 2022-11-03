@@ -19,7 +19,7 @@ const DrawerComp = () => {
                 </Link>
             </div>
             <div className="x-container">
-                <img src="images/x.png" className='x-symbol'/>
+                <img src="images/x.png" className='x-symbol' alt='x-symbol'/>
             </div>
         </div>
     )
