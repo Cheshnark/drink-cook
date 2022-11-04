@@ -1,0 +1,146 @@
+.beer {
+    /* color: white; */
+    background-color: white;
+    position: absolute;
+    margin: 1.5rem;
+    border-radius: 5px;
+}
+
+.beer-item {
+    position: relative;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+.beer-x-container {
+    width: 70px;
+    position:absolute;
+    right: 5%;
+}
+
+@media (min-width: 620px){
+    .beer {
+        position: relative;
+        margin: 3rem auto;
+        padding: 1rem;
+        width: 60%;
+        text-align: justify;
+    }
+
+    .beer-item {
+        margin-bottom: 3rem;
+    }
+}
+
+.beer-img-container {
+    width: 5.5rem;
+    height: 19.1rem;
+    margin: 2rem auto 5rem auto;
+    padding-top: 1.5rem;
+    position: relative;
+}
+
+.beer-img-container img {
+    width: 100%;
+    margin: auto;
+    position: absolute;
+    bottom: -2.5rem;
+}
+
+.content-container{
+    margin-bottom: 3rem;
+}
+
+@media (min-width: 620px){
+    .content-container {
+        width: 65%;
+        margin: auto;
+    }
+}
+
+.beer h1,h2,h3 {
+    text-align:center;
+}
+
+.beer h3, p {
+    margin: 1rem auto;
+}
+
+.beer h1 {
+    text-transform: uppercase;
+    line-height: 4.5rem;
+    
+}
+
+.beer h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    
+}
+
+.beer h3 {
+    font-size: 2rem;
+}
+
+.specs-grid {
+    display: grid;
+    grid-template-columns: 7rem 7rem;
+    grid-template-rows: auto;
+    grid-gap: 20px;
+    justify-items:center;
+    margin: 0 auto;
+    width: 80%;
+    place-content: center;
+}
+
+.specs-grid p {
+    width: 75%;
+    margin-top: 0;
+}
+
+.specs-grid h4 {
+    font-weight: 700;
+}
+
+.food-grid {
+    display: grid;
+    grid-template-columns: 8rem 8rem;
+    grid-template-rows: auto;
+    grid-gap: 2.5rem;
+    margin: 0 auto;
+    padding: 0.1rem;
+    width: 95%;
+}
+
+@media (min-width: 620px) {
+    .food-grid {
+        width: 65%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1000px) {
+    .food-grid {
+        width: 65%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1600px) {
+    .food-grid {
+        grid-template-columns: 15rem 15rem;
+    }
+}
+
+.beer ul {
+    width: 95%;
+    margin: 0 auto 0 auto;
+    list-style: inside;
+    font-size: 1.05rem;
+}
+
+.food-buttons button {
+    position: relative;
+    top: 25%;
+    z-index: 100;
+}

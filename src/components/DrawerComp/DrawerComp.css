@@ -1,0 +1,32 @@
+.drawer-comp {
+    height: 65vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.drawer-comp__content {
+    text-align: center;
+    position: relative;
+    top: 20%;
+    color: white;
+ }
+
+h1 {
+    font-size: 5rem;
+}
+
+h2 {
+    margin-top: 1rem;
+    font-size: 2rem;
+}
+
+.x-symbol {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    filter: invert(1);
+    cursor: pointer;
+}

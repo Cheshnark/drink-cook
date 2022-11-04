@@ -1,0 +1,21 @@
+.random-content {
+    margin-top: 8rem;
+}
+
+.random-content h1 {
+    color: white;
+    text-align: center;
+}
+
+.random-content .beer {
+    position: static;
+    padding-bottom: 0.01rem;
+}
+
+.random-content .beer h1 {
+    color: black;
+}
+
+.random-content .food-grid{
+    display: block;
+}
