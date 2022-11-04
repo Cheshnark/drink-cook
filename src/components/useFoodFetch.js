@@ -9,10 +9,6 @@ const useFoodFetch = (url) => {
         const abortCont = new AbortController();
         const options = {
             method: 'GET',
-            headers: {
-                'X-RapidAPI-Key': '8cb910c87cmsh7fa5bccb169469bp10ef42jsn86fdd980bc79',
-                'X-RapidAPI-Host': 'tasty.p.rapidapi.com'
-            }
         };
 
         fetch(url, options, {signal:abortCont.signal})

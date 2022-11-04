@@ -58,9 +58,9 @@ const Navbar = () => {
           ) : (
             <nav>
              <ul class="nav-links">
-              <Link to='/beers'><li><a href="#">Beers</a></li></Link>
-              <RandomButton><li><a href="#">Random</a></li></RandomButton>
-              <Link to='/about'><li><a href="#">About</a></li></Link>
+              <Link to='/beers'><li>Beers</li></Link>
+              <RandomButton><li>Random</li></RandomButton>
+              <Link to='/about'><li>About</li></Link>
              </ul>            
           </nav>
           )}

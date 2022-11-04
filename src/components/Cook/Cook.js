@@ -5,7 +5,7 @@ const Cook = (props) => {
     
     const recipeName = props.recipe;
     console.log(recipeName);
-    const {food:dish, pending, error} = useFoodFetch('https://tasty.p.rapidapi.com/recipes/list?from=0&size=20&q=' + recipeName);
+    const {food:dish, pending, error} = useFoodFetch('http://localhost:8000/food', {params:{q:recipeName}});
     
     return(
         // (dish.length > 0) && (
