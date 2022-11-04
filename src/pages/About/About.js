@@ -24,7 +24,7 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <Footer scroll={false}/>
+            <Footer scroll={true}/>
         </div>
     )
 }

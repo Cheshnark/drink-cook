@@ -1,0 +1,22 @@
+.not-found-item {
+    background-color: white;
+    border-radius: 5px;
+    margin: 15rem auto 3rem auto;
+    padding: 1rem;
+    width: 80%;
+}
+
+.not-found-content {
+    padding: 3rem;
+}
+
+.not-found-content h1 {
+    text-align: center;
+    line-height: 5.5rem;
+}
+
+.not-found-content p {
+    white-space: pre-wrap;
+    text-align: justify;
+    font-size: 1.25rem;
+}

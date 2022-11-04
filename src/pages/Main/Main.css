@@ -67,4 +67,8 @@ body {
       font-size: 1rem;
     }
 
+    .main .footer {
+      position: absolute;
+    }
+
 }
