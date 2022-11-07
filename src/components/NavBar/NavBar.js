@@ -25,22 +25,18 @@ const Navbar = () => {
   }
 
   useEffect( () => {
-    window.addEventListener('load', handleSize)
-  }, [])
-
-  useEffect( () => {
     window.addEventListener('scroll', handleScroll);
 
     return () => window.removeEventListener('scroll', handleScroll)
   })
 
-  const handleSize = () => {
+  useEffect(() => {
     if (window.innerWidth < 600) {
       setIsMobile(true);
     } else{
       setIsMobile(false);
     }
-  }
+  }, [])
 
   const handleClick = () => {
     setShown(!shown);
@@ -49,7 +45,7 @@ const Navbar = () => {
   return(
     <div className={`navbar ${visible ? 'top-0' : 'invisible'} `}>        
         <header class="header">
-          <Link to='/'>
+          <Link to='/drink-cook'>
             <div class="header__logo">
                 <img src={logo} alt="Logo de la marca" />
             </div>
@@ -59,9 +55,9 @@ const Navbar = () => {
           ) : (
             <nav>
              <ul class="nav-links">
-              <Link to='/beers'><li>Beers</li></Link>
+              <Link to='/drink-cook/beers'><li>Beers</li></Link>
               <RandomButton><li>Random</li></RandomButton>
-              <Link to='/about'><li>About</li></Link>
+              <Link to='/drink-cook/about'><li>About</li></Link>
              </ul>            
           </nav>
           )}

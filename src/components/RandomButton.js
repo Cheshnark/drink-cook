@@ -26,7 +26,7 @@ const RandomButton = () => {
         {pending && <div>Loading...</div>}
         {error && <div>{error}</div>}
         {beers && (
-            <Link to='/random' state={{randomBeerId:randomBeerId, randomRecipe:randomRecipe}}>
+            <Link to='/drink-cook/random' state={{randomBeerId:randomBeerId, randomRecipe:randomRecipe}}>
                 <button className="bg-transparent text-black font-bold hover:text-white py-2 px-4 hover:scale-110">
                     Random
                 </button>

@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/drink-cook/static/css/main.ff27f91e.css",
+    "main.js": "/drink-cook/static/js/main.fb7b8344.js",
+    "static/media/brewdog-pure-logo.png": "/drink-cook/static/media/brewdog-pure-logo.474755685ad35856aa30.png",
+    "static/media/x.png": "/drink-cook/static/media/x.6e29c06684172ff89736.png",
+    "index.html": "/drink-cook/index.html",
+    "main.ff27f91e.css.map": "/drink-cook/static/css/main.ff27f91e.css.map",
+    "main.fb7b8344.js.map": "/drink-cook/static/js/main.fb7b8344.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ff27f91e.css",
+    "static/js/main.fb7b8344.js"
+  ]
+}

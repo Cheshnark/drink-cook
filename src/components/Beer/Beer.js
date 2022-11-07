@@ -5,19 +5,16 @@ import xSymbol from '../../x.png';
 
 const Beer = (props) => {
     const beerId = props.beerId;
+    const show = props.show;
+    let zap = null;
     const {beer, pending, error} = useBeerFetch('https://api.punkapi.com/v2/beers/' + beerId);
 
-// What follows is a fix I arrived with to avoid the app from bugging when accessing the array, for it
-// considers is empty otherwise and the whole component doesn't load propertly. Need someone to check this. 
+    if(show === 'Shazaam'){
+         zap = false;
+    }else{
+         zap = true;
+    }
 
-    // const foodPairing = beer.food_pairing;
-    // let list = [];
-
-    // if(foodPairing === undefined) {
-    //     console.log('Fuck dis shit');
-    // } else {
-    //     list = foodPairing
-    // }
 
     return(
         <div className="beer">
@@ -25,9 +22,11 @@ const Beer = (props) => {
             {error && <div>{error}</div>}
             {beer && (
                 <div className="beer-item">
-                    <div className="beer-x-container">
-                        <img src={xSymbol} className='beer-x-symbol hover:cursor-pointer' alt='x-symbol'/>
-                    </div>
+                    {zap && 
+                        <div className="beer-x-container">
+                            <img src={xSymbol} className='beer-x-symbol hover:cursor-pointer' alt='x-symbol'/>
+                        </div>
+                    }
                     <div className="beer-img-container">
                         <img src={beer[0].image_url} alt='beer-img'/>
                     </div>
@@ -56,11 +55,13 @@ const Beer = (props) => {
                                 <li>{beer[0].food_pairing[2]}</li>
                             </ul>
                             </div>
-                            <div className="food-buttons">
-                                <Link to='/random' state={{randomBeerId:beerId}}>
+                            {zap && 
+                                <div className="food-buttons">
+                                <Link to='/drink-cook/random' state={{randomBeerId:beerId}}>
                                     <button id={beerId} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">What to cook?</button>
                                 </Link>
                             </div>
+                            }
                         </div>
                         <h3>BREWER TIPS</h3>
                         <p>{beer[0].brewers_tips}</p>

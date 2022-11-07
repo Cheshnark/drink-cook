@@ -11,10 +11,10 @@ function App() {
     <div className="App">
       <Router>
               <Routes>
-                  <Route path="/" element={<Main />} />
-                  <Route path="/beers" element={<Beers />} />
-                  <Route path="/random" element={<Random />} />
-                  <Route path="/about" element={<About />} />
+                  <Route path="/drink-cook" element={<Main />} />
+                  <Route path="/drink-cook/beers" element={<Beers />} />
+                  <Route path="/drink-cook/random" element={<Random />} />
+                  <Route path="/drink-cook/about" element={<About />} />
                   <Route path="*" element={<NotFound />} />
               </Routes>
       </Router>

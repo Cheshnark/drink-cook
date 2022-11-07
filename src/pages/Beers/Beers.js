@@ -45,7 +45,7 @@ const Beers = () => {
                                 <p>{beer.tagline}</p>
                                 <div className="beer-buttons">
                                     <button id={beer.id} onClick={beerInfo} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Info</button>
-                                    <Link to='/random' state={{randomBeerId:randomBeerId}}>
+                                    <Link to='/drink-cook/random' state={{randomBeerId:randomBeerId}}>
                                         <button id={beer.id} onMouseOver={beerToRandom} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">What to cook?</button>
                                     </Link>
                                     

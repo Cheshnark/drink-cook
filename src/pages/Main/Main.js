@@ -37,17 +37,17 @@ const Main = () => {
                     <h1>DRINK & COOK</h1>
                 </div>
                 <div className="main-buttons">
-                    <Link to='/beers'>
+                    <Link to='/drink-cook/beers'>
                         <button class="bg-transparent text-white font-bold hover:text-black py-2 px-4">
                             Beers
                         </button>
                     </Link>
-                    <Link to='/random' state={{randomBeerId:randomBeerId, randomRecipe:randomRecipe}}>
+                    <Link to='/drink-cook/random' state={{randomBeerId:randomBeerId, randomRecipe:randomRecipe}}>
                         <button class="bg-transparent text-white font-bold hover:text-black py-2 px-4">
                             Random
                         </button>
                     </Link>
-                    <Link to='/about'>
+                    <Link to='/drink-cook/about'>
                         <button class="bg-transparent text-white font-bold hover:text-black py-2 px-4">
                             About
                         </button>
