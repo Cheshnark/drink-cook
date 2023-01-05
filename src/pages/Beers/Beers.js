@@ -2,7 +2,7 @@ import './Beers.css';
 import Navbar from '../../components/NavBar/NavBar.js';
 import Footer from '../../components/Footer/Footer';
 import Beer from '../../components/Beer/Beer';
-import { useState } from 'react';
+import { useState, useEffect} from 'react';
 import useBeerFetch from '../../components/useBeerFetch';
 import { Link } from 'react-router-dom';
 
@@ -10,6 +10,7 @@ const Beers = () => {
 
     const [beerId, setBeerId] = useState([]);
     const [randomBeerId, setRandomBeerId] = useState(null);
+    const [randomRecipe, setRandomRecipe] = useState("");
     const [showBeer, setShowBeer] = useState(false);
     const {beer:beers, pending, error} = useBeerFetch('https://api.punkapi.com/v2/beers?page=2&per_page=80');
 
@@ -21,9 +22,19 @@ const Beers = () => {
     const beerToRandom = (e) => {
         setBeerId(e.target.id);
         setRandomBeerId(e.target.id);
-        console.log(randomBeerId);
-
     };
+
+    useEffect(() => {
+        if(beers) {
+            const beerFilter = beers.filter((beer) => {
+                return beer.id == randomBeerId})
+            const beerIndex = beers.indexOf(beerFilter[0])
+
+            const randomDish = beers[beerIndex].food_pairing[Math.floor(Math.random() * 3)];
+            const randomDishFirstWords = randomDish.substring(0, randomDish.indexOf(' ',randomDish.indexOf(' ') + 1));
+            setRandomRecipe(randomDishFirstWords.replace(/\s/g, '%20').toLowerCase());
+        } 
+    }, [randomBeerId])
 
     return (
         <div className="beers">
@@ -45,7 +56,7 @@ const Beers = () => {
                                 <p>{beer.tagline}</p>
                                 <div className="beer-buttons">
                                     <button id={beer.id} onClick={beerInfo} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">Info</button>
-                                    <Link to='/random' state={{randomBeerId:randomBeerId}}>
+                                    <Link to='/random' state={{randomBeerId:randomBeerId, randomRecipe:randomRecipe}}>
                                         <button id={beer.id} onMouseOver={beerToRandom} class="bg-transparent hover:bg-orange-600 text-orange-700 font-semibold hover:text-white py-2 px-4 border border-orange-500 hover:border-transparent rounded">What to cook?</button>
                                     </Link>
                                     

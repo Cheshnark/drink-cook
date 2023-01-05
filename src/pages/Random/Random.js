@@ -12,6 +12,7 @@ const Random = () => {
     const beer = location.state?.randomBeerId;
     const beerIdRandom = beer;
     const recipe = location.state?.randomRecipe;
+    console.log(recipe);
 
     // const beer = location.state?.beerId;
     // const beerIdRandom = beer;
