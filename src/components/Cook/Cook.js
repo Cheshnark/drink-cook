@@ -5,7 +5,7 @@ const Cook = (props) => {
     
     const recipeName = props.recipe;
     console.log(recipeName);
-    const {food:dish, pending, error} = useFoodFetch(`http://localhost:8000/food/${recipeName}`);
+    const {food:dish, pending, error} = useFoodFetch(`https://drink-cook-server-production.up.railway.app/food/${recipeName}`);
 
     const randomIndex = Math.floor(Math.random() * 20);
     
