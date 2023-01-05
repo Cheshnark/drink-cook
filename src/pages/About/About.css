@@ -1,7 +1,11 @@
+.about {
+    padding-bottom: 3rem;
+}
+
 .about-item {
     background-color: white;
     border-radius: 5px;
-    margin: 15rem auto 3rem auto;
+    margin: 10rem auto 3rem auto;
     padding: 1rem;
     width: 80%;
 }
