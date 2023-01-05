@@ -18,6 +18,10 @@
     right: 5%;
 }
 
+.random .beer-x-container {
+    visibility: hidden;
+}
+
 @media (min-width: 620px){
     .beer {
         position: relative;
@@ -143,4 +147,8 @@
     position: relative;
     top: 25%;
     z-index: 100;
+}
+
+.random .food-buttons {
+    visibility: hidden;
 }
