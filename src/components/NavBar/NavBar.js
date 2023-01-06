@@ -23,16 +23,6 @@ const Navbar = () => {
     setPrevScrollPos(currentScrollPos);
   }
 
-  useEffect( () => {
-    window.addEventListener('load', handleSize)
-  }, [])
-
-  useEffect( () => {
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll)
-  })
-
   const handleSize = () => {
     if (window.innerWidth < 600) {
       setIsMobile(true);
@@ -45,6 +35,16 @@ const Navbar = () => {
     setShown(!shown);
   }
 
+  useEffect( () => {
+    window.addEventListener('load', handleSize)
+  }, [])
+
+  useEffect( () => {
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll)
+  })
+
   return(
     <div className={`navbar ${visible ? 'top-0' : 'invisible'} `}>        
         <header class="header">
@@ -53,17 +53,14 @@ const Navbar = () => {
                 <img src="images/brewdog-pure-logo.png" alt="Logo de la marca" />
             </div>
           </Link>
-          {isMobile ? (
-            <button onClick={handleClick}><DrawerButton /></button>
-          ) : (
-            <nav>
-             <ul class="nav-links">
+            <button onClick={handleClick} className='mobile-navigation'><DrawerButton /></button>
+            <nav className='navigation'>
+             <ul className="nav-links">
               <Link to='/beers'><li>Beers</li></Link>
               <RandomButton><li>Random</li></RandomButton>
               <Link to='/about'><li>About</li></Link>
              </ul>            
           </nav>
-          )}
           {shown && (
             <div onClick={handleClick}>
               <DrawerComp />
