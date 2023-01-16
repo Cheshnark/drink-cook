@@ -1,6 +1,8 @@
 import './DrawerComp.css'
 import {Link} from 'react-router-dom';
 
+import RandomButton from '../RandomButton';
+
 const DrawerComp = () => {
 
     return (
@@ -11,9 +13,9 @@ const DrawerComp = () => {
                 <Link to='/beers'>
                     <h2 className='hover:text-gray-900  hover:cursor-pointer'>Beers</h2>
                 </Link>
-                <Link to='/random'>
-                    <h2 className='hover:text-gray-900  hover:cursor-pointer'>Random</h2>
-                </Link>
+                <RandomButton>
+                    <h2 className='hover:text-gray-900  hover:cursor-pointer text-white'>Random</h2>
+                </RandomButton>
                 <Link to='/about'>
                     <h2 className='hover:text-gray-900  hover:cursor-pointer'>About</h2>
                 </Link>

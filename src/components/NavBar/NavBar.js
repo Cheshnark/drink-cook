@@ -8,7 +8,6 @@ import RandomButton from '../RandomButton';
 const Navbar = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
-  const [isMobile, setIsMobile] = useState(false);
   const [shown, setShown] = useState(false); 
 
   const handleScroll = () => {
@@ -23,21 +22,9 @@ const Navbar = () => {
     setPrevScrollPos(currentScrollPos);
   }
 
-  const handleSize = () => {
-    if (window.innerWidth < 600) {
-      setIsMobile(true);
-    } else{
-      setIsMobile(false);
-    }
-  }
-
   const handleClick = () => {
     setShown(!shown);
   }
-
-  useEffect( () => {
-    window.addEventListener('load', handleSize)
-  }, [])
 
   useEffect( () => {
     window.addEventListener('scroll', handleScroll);

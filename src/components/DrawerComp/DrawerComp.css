@@ -30,3 +30,12 @@ h2 {
     filter: invert(1);
     cursor: pointer;
 }
+
+.drawer-comp__content button {
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 400;
+    margin: 1rem auto 0 auto;
+    padding: 0;
+ }
